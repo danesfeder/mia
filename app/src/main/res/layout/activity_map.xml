@@ -6,10 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".map.MapActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_chat"
+    <RelativeLayout
+        android:id="@+id/rl_chat_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#8C000000"
+        android:focusableInTouchMode="true"
+        android:translationZ="1dp"
+        android:clipToPadding="true">
+
+        <ImageView
+            android:id="@+id/iv_hide_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:tint="#FFF"
+            android:translationZ="2dp"
+            android:src="@drawable/ic_clear"
+            android:contentDescription="@string/clear_chat_button"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:requiresFadingEdge="vertical"
+            android:fadingEdgeLength="30dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+    </RelativeLayout>
 
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mv_map"
@@ -22,7 +50,7 @@
         mapbox:zoom="12"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/bot_fab"
+        android:id="@+id/search_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

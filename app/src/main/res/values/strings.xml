@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MIA</string>
     <string name="access_token">pk.eyJ1IjoiZGFuZXNmZWRlciIsImEiOiJjaXphcGQ3Z3UwOHZ0MzJwb29iYzFxOHN3In0.-bCoGo_p28frKqhjLL5ZuA</string>
+    <string name="placeholder_response_text">Placeholder response text</string>
+    <string name="placeholder_input_text">Placeholder input text</string>
+    <string name="clear_chat_button">clear chat button</string>
 </resources>

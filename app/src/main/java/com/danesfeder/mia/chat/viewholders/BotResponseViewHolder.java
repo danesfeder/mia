@@ -1,5 +1,22 @@
 package com.danesfeder.mia.chat.viewholders;
 
-public class BotResponseViewHolder {
+import android.view.View;
+import android.widget.TextView;
 
+import com.danesfeder.mia.R;
+import com.danesfeder.mia.chat.dataobjects.BotObject;
+
+public class BotResponseViewHolder extends BaseViewHolder {
+
+    private TextView tvResponseText;
+
+    public BotResponseViewHolder(View itemView) {
+        super(itemView);
+        this.tvResponseText = (TextView) itemView.findViewById(R.id.tv_response_text);
+    }
+
+    @Override
+    public void onBindView(BotObject object) {
+        this.tvResponseText.setText(object.getText());
+    }
 }
