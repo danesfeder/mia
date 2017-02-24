@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">MIA</string>
-    <string name="access_token">pk.eyJ1IjoiZGFuZXNmZWRlciIsImEiOiJjaXphcGQ3Z3UwOHZ0MzJwb29iYzFxOHN3In0.-bCoGo_p28frKqhjLL5ZuA</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZGFuZXNmZWRlciIsImEiOiJjaXphcGQ3Z3UwOHZ0MzJwb29iYzFxOHN3In0.-bCoGo_p28frKqhjLL5ZuA</string>
     <string name="placeholder_response_text">Placeholder response text</string>
     <string name="placeholder_input_text">Placeholder input text</string>
     <string name="clear_chat_button">clear chat button</string>
+    <string name="mia_greeting">Hi, I\'m MIA!</string>
+    <string name="apiai_access_token">2e8d9825e5cd4c10be8c7f64abc3b61d</string>
+    <string name="ask_a_question">Ask a question</string>
 </resources>
