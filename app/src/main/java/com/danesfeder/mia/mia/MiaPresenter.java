@@ -76,10 +76,26 @@ class MiaPresenter implements MiaContract.Presenter {
             view.scrollToBottom();
 
             if (!result.isActionIncomplete()) {
-                view.hideKeyboard();
-                view.hideChatView();
-                view.showSearchBtn();
+                String origin = "";
+                String destination = "";
+                if (result.getParameters() != null && !result.getParameters().isEmpty()) {
+                    for (final Map.Entry<String, JsonElement> entry : result.getParameters().entrySet()) {
+                        if (entry.getKey().equals("origin")) {
+                            origin = entry.getValue().toString();
+                        } else if (entry.getKey().equals("destination")) {
+                            destination = entry.getValue().toString();
+                        }
+                    }
+                }
+
+                hideChat();
             }
         }
+    }
+
+    private void hideChat() {
+        view.hideKeyboard();
+        view.hideChatView();
+        view.showSearchBtn();
     }
 }
